@@ -1,0 +1,15 @@
+diff --git a/Trio/Sources/Services/UnlockManager/UnlockManager.swift b/Trio/Sources/Services/UnlockManager/UnlockManager.swift
+index bd76ac978..595dd3ef4 100644
+--- a/Trio/Sources/Services/UnlockManager/UnlockManager.swift
++++ b/Trio/Sources/Services/UnlockManager/UnlockManager.swift
+@@ -11,7 +11,9 @@ final class BaseUnlockManager: UnlockManager {
+         let reason = "We need to make sure you are the owner of the device."
+ 
+         do {
+-            _ = try await context.evaluatePolicy(.deviceOwnerAuthentication, localizedReason: reason)
++            if false {
++                _ = try await context.evaluatePolicy(.deviceOwnerAuthentication, localizedReason: reason)
++            }
+             return true
+         } catch {
+             throw error
