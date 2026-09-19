@@ -1,0 +1,12 @@
+diff --git a/Trio/Sources/Services/UnlockManager/UnlockManager.swift b/Trio/Sources/Services/UnlockManager/UnlockManager.swift
+index bd76ac978..53cb4d229 100644
+--- a/Trio/Sources/Services/UnlockManager/UnlockManager.swift
++++ b/Trio/Sources/Services/UnlockManager/UnlockManager.swift
+@@ -7,6 +7,7 @@ protocol UnlockManager {
+ 
+ final class BaseUnlockManager: UnlockManager {
+     @MainActor func unlock() async throws -> Bool {
++        return true
+         let context = LAContext()
+         let reason = "We need to make sure you are the owner of the device."
+ 
